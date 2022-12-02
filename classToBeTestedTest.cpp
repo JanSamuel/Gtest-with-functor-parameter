@@ -10,7 +10,7 @@ TEST_P(testClassParameters, ShouldSetAndGetIntSetting)
 {
     int settingValue;
     auto [function, input, result]  = GetParam();
-    EXPECT_OK(function(input, settingValue));
+    function(input, settingValue);
     ASSERT_EQ(result, settingValue);
 }
 
